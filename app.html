@@ -1,0 +1,2265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC/DC - Complete History | Ultimate Band Profile</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-red: #E31C25;
+            --secondary-red: #B8151D;
+            --dark-bg: #0a0a0a;
+            --darker-bg: #050505;
+            --card-bg: rgba(20, 20, 20, 0.9);
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --accent-gold: #FFD700;
+            --border-color: rgba(227, 28, 37, 0.3);
+            --lightning-yellow: #FFEB3B;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.98);
+            backdrop-filter: blur(15px);
+            border-bottom: 2px solid var(--primary-red);
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 4px 30px rgba(227, 28, 37, 0.4);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: var(--primary-red);
+            text-decoration: none;
+            letter-spacing: 4px;
+            text-shadow: 0 0 20px rgba(227, 28, 37, 0.5);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-red), var(--lightning-yellow));
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-red);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--darker-bg) 0%, #1a0000 50%, var(--darker-bg) 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 40%, rgba(227, 28, 37, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255, 235, 59, 0.1) 0%, transparent 50%);
+            animation: pulse 6s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            padding: 2rem;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.9rem 2.5rem;
+            background: linear-gradient(135deg, var(--primary-red), var(--secondary-red));
+            color: white;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 2rem;
+            clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+            animation: fadeInDown 1s ease-out;
+            box-shadow: 0 10px 40px rgba(227, 28, 37, 0.4);
+        }
+
+        .hero-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(5rem, 15vw, 12rem);
+            font-weight: 400;
+            line-height: 0.9;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(180deg, var(--lightning-yellow), var(--primary-red), #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 15px;
+            animation: fadeInUp 1s ease-out 0.2s both;
+            filter: drop-shadow(0 0 60px rgba(227, 28, 37, 0.6));
+            transform: skewX(-3deg);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.3rem, 3vw, 2.2rem);
+            font-weight: 300;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 1s ease-out 0.4s both;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-image {
+            max-width: 500px;
+            width: 90%;
+            margin: 2rem auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 80px rgba(227, 28, 37, 0.5);
+            border: 3px solid var(--primary-red);
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .meta-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(227, 28, 37, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .meta-item:hover::before {
+            left: 100%;
+        }
+
+        .meta-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(227, 28, 37, 0.4);
+            border-color: var(--primary-red);
+        }
+
+        .meta-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--lightning-yellow);
+            margin-bottom: 0.6rem;
+            font-weight: 700;
+        }
+
+        .meta-value {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-align: center;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 7rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .section:nth-child(even) {
+            background: linear-gradient(180deg, transparent 0%, rgba(139, 0, 0, 0.08) 50%, transparent 100%);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 400;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+            letter-spacing: 5px;
+            position: relative;
+            display: inline-block;
+            text-shadow: 0 0 30px rgba(227, 28, 37, 0.5);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 5px;
+            background: linear-gradient(90deg, transparent, var(--primary-red), var(--lightning-yellow), var(--primary-red), transparent);
+        }
+
+        /* Quick Facts Grid */
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .fact-card {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fact-card::before {
+            content: '⚡';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 2.5rem;
+            opacity: 0.1;
+            transition: all 0.3s ease;
+        }
+
+        .fact-card:hover::before {
+            opacity: 0.3;
+            transform: rotate(15deg) scale(1.2);
+        }
+
+        .fact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(227, 28, 37, 0.35);
+            border-color: var(--primary-red);
+        }
+
+        .fact-icon {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--lightning-yellow);
+        }
+
+        .fact-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary-red);
+            margin-bottom: 0.6rem;
+            font-weight: 700;
+        }
+
+        .fact-value {
+            font-size: 1.05rem;
+            color: var(--text-primary);
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* Content Sections with Images */
+        .content-with-image {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .content-with-image.reverse {
+            direction: rtl;
+        }
+
+        .content-with-image.reverse > * {
+            direction: ltr;
+        }
+
+        .content-text h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.8rem;
+            color: var(--primary-red);
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+            line-height: 1.1;
+        }
+
+        .content-text h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--lightning-yellow);
+            margin: 2rem 0 1rem;
+            letter-spacing: 1.5px;
+        }
+
+        .content-text p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .content-text ul {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .content-text ul li {
+            padding: 0.7rem 0;
+            padding-left: 2rem;
+            color: var(--text-secondary);
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .content-text ul li::before {
+            content: '⚡';
+            position: absolute;
+            left: 0;
+            color: var(--primary-red);
+            font-weight: bold;
+        }
+
+        .content-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 80px rgba(227, 28, 37, 0.35);
+            border: 3px solid var(--primary-red);
+            transition: all 0.5s ease;
+        }
+
+        .content-image:hover {
+            transform: scale(1.03);
+            box-shadow: 0 25px 100px rgba(227, 28, 37, 0.5);
+        }
+
+        .content-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Biography Content */
+        .bio-content {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .bio-section {
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .bio-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .bio-section h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.8rem;
+            color: var(--primary-red);
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            border-left: 5px solid var(--primary-red);
+            letter-spacing: 2px;
+        }
+
+        .bio-section h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--lightning-yellow);
+            margin: 2rem 0 1rem;
+            letter-spacing: 1.5px;
+        }
+
+        .bio-section p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .bio-highlight {
+            background: linear-gradient(135deg, rgba(227, 28, 37, 0.15), rgba(255, 235, 59, 0.1));
+            border-left: 5px solid var(--primary-red);
+            padding: 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            box-shadow: 0 10px 40px rgba(227, 28, 37, 0.2);
+        }
+
+        /* Albums Grid */
+        .albums-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .album-card {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .album-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-red), var(--lightning-yellow));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .album-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .album-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(227, 28, 37, 0.3);
+            border-color: var(--primary-red);
+        }
+
+        .album-year {
+            display: inline-block;
+            background: var(--primary-red);
+            color: white;
+            padding: 0.4rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .album-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .album-details {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Songs List */
+        .songs-list {
+            margin-top: 3rem;
+        }
+
+        .song-item {
+            background: var(--card-bg);
+            border-left: 5px solid var(--primary-red);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .song-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(227, 28, 37, 0.05), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .song-item:hover::before {
+            transform: translateX(0);
+        }
+
+        .song-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 50px rgba(227, 28, 37, 0.25);
+            border-left-color: var(--lightning-yellow);
+        }
+
+        .song-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            color: var(--primary-red);
+            float: left;
+            margin-right: 1.5rem;
+            line-height: 1;
+            opacity: 0.4;
+        }
+
+        .song-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .song-meta {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .song-meta strong {
+            color: var(--lightning-yellow);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary-red), var(--lightning-yellow), var(--primary-red));
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: calc(50% + 30px);
+            position: relative;
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.6s ease;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: calc(50% + 30px);
+            transform: translateX(50px);
+        }
+
+        .timeline-item:nth-child(even).visible {
+            transform: translateX(0);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--primary-red);
+            border: 4px solid var(--dark-bg);
+            border-radius: 50%;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover::before {
+            transform: translateX(-50%) scale(1.4);
+            box-shadow: 0 0 25px var(--primary-red);
+            background: var(--lightning-yellow);
+        }
+
+        .timeline-content {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            padding: 1.8rem;
+            max-width: 450px;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+        }
+
+        .timeline-content:hover {
+            box-shadow: 0 10px 50px rgba(227, 28, 37, 0.3);
+            border-color: var(--primary-red);
+        }
+
+        .timeline-year {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--primary-red);
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        .timeline-text {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Member Cards */
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .member-card {
+            background: linear-gradient(135deg, var(--card-bg), rgba(227, 28, 37, 0.08));
+            border: 2px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.5s ease;
+            position: relative;
+        }
+
+        .member-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 70px rgba(227, 28, 37, 0.45);
+            border-color: var(--primary-red);
+        }
+
+        .member-header {
+            background: linear-gradient(135deg, var(--primary-red), var(--secondary-red));
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .member-header::before {
+            content: '⚡';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 8rem;
+            color: rgba(255, 255, 255, 0.1);
+            transform: rotate(15deg);
+        }
+
+        .member-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            color: white;
+            position: relative;
+            z-index: 1;
+            letter-spacing: 2px;
+        }
+
+        .member-role {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.95);
+            margin-top: 0.5rem;
+            position: relative;
+            z-index: 1;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .member-body {
+            padding: 2rem;
+        }
+
+        .member-detail {
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 0.8rem;
+            align-items: baseline;
+        }
+
+        .detail-label {
+            font-weight: 700;
+            color: var(--primary-red);
+            min-width: 110px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .detail-value {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .member-bio {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--border-color);
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        /* Facts Section */
+        .facts-container {
+            margin-top: 3rem;
+        }
+
+        .fact-block {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+        }
+
+        .fact-block:hover {
+            border-color: var(--primary-red);
+            box-shadow: 0 15px 50px rgba(227, 28, 37, 0.25);
+        }
+
+        .fact-block h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--primary-red);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            letter-spacing: 1.5px;
+        }
+
+        .fact-block h3::before {
+            content: '⚡';
+            color: var(--lightning-yellow);
+            font-size: 1.8rem;
+        }
+
+        .fact-subsection {
+            margin-bottom: 1.5rem;
+        }
+
+        .fact-subsection h4 {
+            color: var(--lightning-yellow);
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .fact-subsection p,
+        .fact-subsection ul {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .fact-subsection ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .fact-subsection li {
+            padding: 0.6rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .fact-subsection li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--primary-red);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Awards Section */
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .award-card {
+            background: linear-gradient(135deg, var(--card-bg), rgba(255, 235, 59, 0.05));
+            border: 2px solid var(--border-color);
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .award-card::before {
+            content: '🏆';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 6rem;
+            opacity: 0.07;
+            transform: rotate(15deg);
+        }
+
+        .award-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(227, 28, 37, 0.35);
+            border-color: var(--primary-red);
+        }
+
+        .award-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .award-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .award-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--darker-bg);
+            border-top: 3px solid var(--primary-red);
+            padding: 4rem 2rem 2rem;
+            margin-top: 6rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            font-weight: 400;
+            color: var(--primary-red);
+            margin-bottom: 1.5rem;
+            letter-spacing: 8px;
+            text-shadow: 0 0 30px rgba(227, 28, 37, 0.5);
+        }
+
+        .footer-text {
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-red);
+        }
+
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .content-with-image,
+            .content-with-image.reverse {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-title {
+                letter-spacing: 8px;
+                transform: skewX(-1deg);
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                padding-left: 55px;
+                padding-right: 0;
+                justify-content: flex-start;
+            }
+
+            .timeline-item::before,
+            .timeline-item:nth-child(even)::before {
+                left: 20px;
+            }
+
+            .section {
+                padding: 5rem 1.5rem;
+            }
+        }
+    </style>
+
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)'], ['$$', '$$'], ['\\[', '\\]']], 
+                displayMath: []
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">AC/DC</a>
+            <ul class="nav-links">
+                <li><a href="#quick-facts">Facts</a></li>
+                <li><a href="#origins">Origins</a></li>
+                <li><a href="#bon-scott">Bon Scott Era</a></li>
+                <li><a href="#brian-johnson">Brian Johnson</a></li>
+                <li><a href="#members">Members</a></li>
+                <li><a href="#discography">Discography</a></li>
+                <li><a href="#hit-songs">Hits</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">High Voltage Rock 'n' Roll Since 1973</div>
+            <h1 class="hero-title">AC/DC</h1>
+            <p class="hero-subtitle">The Legendary Hard Rock Band • 200+ Million Records Sold</p>
+            
+            <div class="hero-image">
+                <img src="https://images.openai.com/static-rsc-4/DCvHQMlcKmBeygU7QtyQ_D6dljZwadB4jJXQsNJLV8SCfK8WI7u_5o6G_dNFZiUMcU0z2iE4xs_nSRAmxq4lsTlEHH4cUzV4E-fa-HWtr8ty3SYmHRFuzaSsaDRmLNs0szKZ_TftY8rOGqasAtPBuWCPKNDHl_f0qiFqaDT1xLDcmhjLZx15I5wv9F6L-ou8?purpose=fullsize" alt="AC/DC Logo">
+            </div>
+            
+            <div class="hero-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Genre</span>
+                    <span class="meta-value">Hard Rock / Blues Rock / Heavy Metal</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Origin</span>
+                    <span class="meta-value">Sydney, Australia</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Years Active</span>
+                    <span class="meta-value">1973 – Present</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Records Sold</span>
+                    <span class="meta-value">200+ Million Worldwide</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Best Album</span>
+                    <span class="meta-value">Back in Black (50M+ Copies)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Facts Section -->
+    <section class="section" id="quick-facts">
+        <div class="section-header">
+            <h2 class="section-title">Quick Facts</h2>
+        </div>
+        
+        <div class="facts-grid fade-in">
+            <div class="fact-card">
+                <div class="fact-icon">🎸</div>
+                <div class="fact-label">Formed</div>
+                <div class="fact-value">November 1973 in Sydney, Australia</div>
+            </div>
+            
+            <div class="fact-card">
+                <div class="fact-icon">🌏</div>
+                <div class="fact-label">Origin</div>
+                <div class="fact-value">Sydney, Australia (founded by Scottish immigrants)</div>
+            </div>
+            
+            <div class="fact-card">
+                <div class="fact-icon">🎵</div>
+                <div class="fact-label">Genres</div>
+                <div class="fact-value">Hard Rock, Blues Rock, Heavy Metal</div>
+            </div>
+            
+            <div class="fact-card">
+                <div class="fact-icon">👑</div>
+                <div class="fact-label">Founders</div>
+                <div class="fact-value">Angus Young & Malcolm Young</div>
+            </div>
+            
+            <div class="fact-card">
+                <div class="fact-icon">⭐</div>
+                <div class="fact-label">Current Members</div>
+                <div class="fact-value">Angus Young, Brian Johnson, Phil Rudd, Cliff Williams, Stevie Young</div>
+            </div>
+            
+            <div class="fact-card">
+                <div class="fact-icon">💿</div>
+                <div class="fact-label">Best-Selling Album</div>
+                <div class="fact-value">Back in Black (50+ million copies)</div>
+            </div>
+            
+            <div class="fact-card">
+                <div class="fact-icon">🏆</div>
+                <div class="fact-label">Hall of Fame</div>
+                <div class="fact-value">Rock and Roll Hall of Fame Inductee (2003)</div>
+            </div>
+            
+            <div class="fact-card">
+                <div class="fact-icon">💰</div>
+                <div class="fact-label">Total Sales</div>
+                <div class="fact-value">200+ million records worldwide</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Origins Section -->
+    <section class="section" id="origins">
+        <div class="section-header">
+            <h2 class="section-title">Origins: The Young Family Story</h2>
+        </div>
+        
+        <div class="content-with-image fade-in">
+            <div class="content-text">
+                <h2>From Scotland to Australia</h2>
+                <p>The story of AC/DC begins with the <strong>Young family</strong> in <strong>Glasgow, Scotland</strong>. Brothers <strong>Malcolm Young</strong> (born January 6, 1953) and <strong>Angus Young</strong> (born March 31, 1955) grew up in a working-class family where music was already part of their DNA.</p>
+                
+                <h3>The Family Musical Legacy</h3>
+                <p>Their older brother, <strong>George Young</strong>, had already achieved fame as the guitarist for <strong>The Easybeats</strong>, one of Australia's most successful bands of the 1960s. George's hit song "Friday on My Mind" reached international success, proving that the Young brothers had rock music in their blood.</p>
+                
+                <p>In <strong>1963</strong>, the entire Young family emigrated from Scotland to <strong>Sydney, Australia</strong>, seeking better opportunities. This move would prove pivotal not just for the family, but for the future of rock music worldwide.</p>
+                
+                <h3>How AC/DC Got Its Name ⚡</h3>
+                <p>The band's iconic name came from an unexpected source: their sister <strong>Margaret Young</strong> noticed the letters <strong>"AC/DC"</strong> (Alternating Current/Direct Current) printed on her sewing machine. When she pointed it out to Malcolm and Angus, they immediately recognized its power:</p>
+                
+                <ul>
+                    <li>Represented <strong>energy and electricity</strong></li>
+                    <li>Symbolized the <strong>raw power</strong> of their music</li>
+                    <li>Had <strong>universal recognition</strong> across languages</li>
+                    <li>Captured the <strong>dual nature</strong> of their sound</li>
+                </ul>
+                
+                <p>The name was perfect – simple, memorable, and visually striking with that forward slash.</p>
+            </div>
+            
+            <div class="content-image">
+                <img src="https://images.openai.com/static-rsc-4/VDc_1CaazM5myL4MEJu4jvzhr6Q6vvf6awdHxzvsA_xyz9OUJzqg4NTO_HYjdKLCZ8y7fXM6ydlBrIVulUDIuClAhhqIJSyrgzPnfwBR3jf36CtYEPT64oeD59sXAohCjeb05ohH-N5NSduEL_DVNLJgryjVwgrHKK-F5iJCSS6tTy7pfzPG9oFqxk_3BHKl?purpose=fullsize" alt="The Young Brothers">
+            </div>
+        </div>
+    </section>
+
+    <!-- Formation Section -->
+    <section class="section" id="formation">
+        <div class="section-header">
+            <h2 class="section-title">Formation & Early Struggles (1973-1974)</h2>
+        </div>
+        
+        <div class="content-with-image reverse fade-in">
+            <div class="content-text">
+                <h2>Building the Band: November 1973</h2>
+                <p>In <strong>November 1973</strong>, Malcolm and Angus Young officially formed <strong>AC/DC</strong> in Sydney. They were determined to create a band that would play raw, unfiltered rock 'n' roll – no frills, no pretension, just pure energy.</p>
+                
+                <h3>Original Lineup (1973)</h3>
+                <p>The first incarnation of AC/DC featured:</p>
+                <ul>
+                    <li><strong>Angus Young</strong> – Lead guitar (age 18)</li>
+                    <li><strong>Malcolm Young</strong> – Rhythm guitar (age 20)</li>
+                    <li><strong>Dave Evans</strong> – Lead vocals</li>
+                    <li><strong>Larry Van Kriedt</strong> – Bass guitar</li>
+                    <li><strong>Colin Burgess</strong> – Drums</li>
+                </ul>
+                
+                <h3>The Difficult Early Months ⚡</h3>
+                <p>The initial period was marked by <strong>instability and struggle</strong>:</p>
+                <ul>
+                    <li>Members frequently joined and left the band</li>
+                    <li>Financial difficulties were constant</li>
+                    <li>Dave Evans' vocal style didn't match the band's vision</li>
+                    <li>The Young brothers searched tirelessly for musicians who shared their raw, high-energy vision</li>
+                </ul>
+                
+                <p>They played small venues around Sydney, building a reputation for <strong>explosive live performances</strong> that set them apart from the more polished acts of the era. Even in these early days, <strong>Angus's schoolboy uniform</strong> began to emerge as his signature stage look – suggested by his sister Margaret who thought it would be funny and memorable.</p>
+                
+                <p>The band was developing something special, but they needed the right frontman to complete their sound...</p>
+            </div>
+            
+            <div class="content-image">
+                <img src="https://images.openai.com/static-rsc-4/4r2C_RSiRIafrY1BNLq7_5lygO3KH-ZcBp3Re4s7CeHYjqqCJWbthlDN8c8EUs6kQYJNJsSSK-nKVxkcaVWBHfREXUif5X6QSJUYHG09JdkGOaGykqazN9p6723n9hlTtEVHgO210WLmQ4IHpdwaZJZ4LZB1IpMjc5dtEiIdybOt5NYzonmEs7ZaoJ8yCppH?purpose=fullsize" alt="Early AC/DC Performance">
+            </div>
+        </div>
+    </section>
+
+    <!-- Bon Scott Era Section -->
+    <section class="section" id="bon-scott">
+        <div class="section-header">
+            <h2 class="section-title">The Bon Scott Era (1974–1980): Rise to Glory</h2>
+        </div>
+        
+        <div class="bio-content">
+            <div class="bio-section">
+                <h2>Enter Bon Scott: The Perfect Frontman</h2>
+                <p>In <strong>1974</strong>, everything changed when <strong>Ronald Belford "Bon" Scott</strong> joined AC/DC as their new lead vocalist, replacing Dave Evans. Bon was born on <strong>July 9, 1946</strong>, in <strong>Scotland</strong> – like the Young brothers, his family had also emigrated to Australia.</p>
+                
+                <h3>Who Was Bon Scott?</h3>
+                <p>Before AC/DC, Bon had:</p>
+                <ul>
+                    <li>Worked various jobs (farm laborer, fisherman, truck driver)</li>
+                    <li>Played in several local Australian bands</li>
+                    <li>Developed a reputation as a rough-and-tumble performer</li>
+                    <li>Built a charismatic stage presence</li>
+                </ul>
+                
+                <p>Bon's <strong>raspy, powerful voice</strong> and <strong>bad-boy image</strong> were exactly what AC/DC needed. He brought humor, authenticity, and a dangerous edge that perfectly complemented the Young brothers' hard-driving guitar work.</p>
+            </div>
+
+            <div class="content-with-image fade-in">
+                <div class="content-text">
+                    <h3>Personal Life</h3>
+                    <ul>
+                        <li><strong>Wife:</strong> Irene Thornton (married 1972, later divorced)</li>
+                        <li><strong>Children:</strong> No publicly confirmed children despite longstanding rumors</li>
+                        <li><strong>Personality:</strong> Known for his wit, charm, and rebellious spirit both on and off stage</li>
+                    </ul>
+                    
+                    <h3>The Classic Albums (1975-1979)</h3>
+                    <p>With Bon Scott at the helm, AC/DC released a series of albums that would define hard rock:</p>
+                    
+                    <p><strong>High Voltage (Australia, 1975 / International 1976)</strong><br>
+                    Their debut introduced the world to AC/DC's raw sound featuring "It's a Long Way to the Top (If You Wanna Rock 'n' Roll)"</p>
+                    
+                    <p><strong>T.N.T. (1975)</strong><br>
+                    The Australian-only release that included classics like "T.N.T." and "High Voltage"</p>
+                    
+                    <p><strong>Dirty Deeds Done Dirt Cheap (1976)</strong><br>
+                    Featuring the title track and "Big Balls" – showcasing Bon's lyrical wit</p>
+                    
+                    <p><strong>Let There Be Rock (1977)</strong><br>
+                    Pure, unadulterated rock with "Whole Lotta Rosie" and the epic title track</p>
+                    
+                    <p><strong>Powerage (1978)</strong><br>
+                    A harder-edged album featuring "Rock 'n' Roll Damnation"</p>
+                    
+                    <p><strong>Highway to Hell (1979)</strong> ⚡<br>
+                    Their commercial breakthrough produced by Robert John "Mutt" Lange. The title track became their first Top 40 hit in multiple countries. This album proved AC/DC could achieve mainstream success without compromising their sound.</p>
+                </div>
+                
+                <div class="content-image">
+                    <img src="https://images.openai.com/static-rsc-4/HNIC5D34kJnhTtx6mPwF4xwcAZgb361kvFpMEReyhyTPtRrS7RSNNV4HbMBIGLQTqjG-rTVMEMmNxkIcyRoo19yOqm487LgV01kULwyxTiqVgLskCzMye_cg0BHadh50BBMCRHh1ZtJ-m0oswkkez6_G-HX97x8uM7lqhopdeCmr4jW76FrsjTaCmCjty7vr?purpose=fullsize" alt="Bon Scott Performing">
+                </div>
+            </div>
+
+            <div class="bio-section">
+                <h2>International Success</h2>
+                <p>By the late 1970s, AC/DC had become an <strong>international phenomenon</strong>:</p>
+                <ul>
+                    <li>Sold-out tours across Europe, America, and Australia</li>
+                    <li>Millions of albums sold worldwide</li>
+                    <li>Legendary reputation for explosive live shows</li>
+                    <li>Critical acclaim for their authentic, no-nonsense approach to rock</li>
+                </ul>
+                
+                <div class="bio-highlight">
+                    Bon Scott had transformed from a local singer into one of rock's most iconic frontmen. But tragedy was looming...
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;" class="fade-in">
+                <div class="content-image" style="max-width: 800px; margin: 0 auto;">
+                    <img src="https://images.openai.com/static-rsc-4/jX9M1mqt_KHU2KzzMDn7LBvRV7FlySOlSd2ml8TuyH4Jgnb4QU0Zno7AfrwWiq109xvqKyR-_VeUNADHVpxoq25LwE40tRNddo3Lh5QUdbIyEhzvL31or3Dd9xQq0WNLk1qoNXmRXd4N7Vpu9D_CX61BikAk4bEa_bg9eDz5VSOnO1VEnqN7zUKLByY5EV_f?purpose=fullsize" alt="Bon Scott Era Peak">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tragedy Section -->
+    <section class="section" id="tragedy">
+        <div class="section-header">
+            <h2 class="section-title">Tragedy Strikes: February 19, 1980</h2>
+        </div>
+        
+        <div class="bio-content fade-in">
+            <div class="bio-section visible">
+                <h2>A Dark Day for Rock 💀</h2>
+                <p>On <strong>February 19, 1980</strong>, the music world was shattered by devastating news: <strong>Bon Scott was dead at age 33</strong>.</p>
+                
+                <h3>What Happened?</h3>
+                <p>After a night of heavy drinking in London, Bon passed out in a car owned by a friend (musician Alistair Kinnear). Due to freezing overnight temperatures and positional asphyxia, Bon never woke up. His death was ruled as accidental – "death by misadventure" caused by acute alcohol poisoning and exposure to cold.</p>
+                
+                <h3>The Aftermath</h3>
+                <p>The news sent shockwaves through the rock community:</p>
+                <ul>
+                    <li>Fans worldwide mourned the loss of a unique talent</li>
+                    <li>The remaining members faced an impossible question: continue or disband?</li>
+                    <li>Many believed AC/DC couldn't survive without Bon's distinctive voice and presence</li>
+                </ul>
+                
+                <h3>The Decision to Continue ⚡</h3>
+                <p>After much soul-searching, Malcolm, Angus, Cliff, and Phil made a decision that would define their legacy: <strong>they would continue</strong>, believing it was what Bon would have wanted. In his memory, they would keep the music alive.</p>
+                
+                <div class="bio-highlight">
+                    As Angus later reflected, Bon wouldn't have wanted them to give up. The show had to go on. But finding someone to replace an irreplaceable frontman seemed impossible...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brian Johnson Era Section -->
+    <section class="section" id="brian-johnson">
+        <div class="section-header">
+            <h2 class="section-title">The Brian Johnson Era: Back in Black & Beyond</h2>
+        </div>
+        
+        <div class="content-with-image fade-in">
+            <div class="content-text">
+                <h2>Finding the Voice: Brian Johnson Arrives</h2>
+                <p>In <strong>1980</strong>, English singer <strong>Brian Johnson</strong> auditioned for AC/DC – and everything changed.</p>
+                
+                <h3>Who Is Brian Johnson?</h3>
+                <p>Born <strong>October 5, 1947</strong>, in <strong>Newcastle upon Tyne, England</strong>, Brian brought his own credentials:</p>
+                <ul>
+                    <li>Former lead singer of the band <strong>Geordie</strong> (early 1970s)</li>
+                    <li>Married to Brenda Johnson; two daughters</li>
+                    <li>Passionate about <strong>classic cars and motorsports</strong></li>
+                    <li>Known for his powerful, raspy vocals and cap-wearing stage presence</li>
+                </ul>
+                
+                <h3>The Audition Legend</h3>
+                <p>When Brian auditioned, he performed "Whole Lotta Rosie" – a Bon Scott classic. The band knew instantly: this was their guy. His voice had the same raw power and grit that made AC/DC special.</p>
+                
+                <h3>Back in Black (1980): A Monumental Tribute 🏆</h3>
+                <p>Released just <strong>five months after Bon's death</strong>, <strong>Back in Black</strong> was a tribute to their fallen friend. Produced again by Mutt Lange, it became:</p>
+                <ul>
+                    <li><strong>One of the best-selling albums in music history</strong></li>
+                    <li><strong>Over 50 million copies sold worldwide</strong></li>
+                    <li><strong>A defining moment for hard rock</strong></li>
+                </ul>
+                
+                <h3>Iconic Tracks:</h3>
+                <p><strong>"Hells Bells"</strong> – Opens with ominous tolling bells, a memorial to Bon<br>
+                <strong>"Shoot to Thrill"</strong> – Pure adrenaline-fueled rock<br>
+                <strong>"Back in Black"</strong> – The title track, a statement of resilience<br>
+                <strong>"You Shook Me All Night Long"</strong> – Their biggest radio hit, still ubiquitous today<br>
+                <strong>"Rock and Roll Ain't Noise Pollution"</strong> – A defense of their musical philosophy</p>
+                
+                <p>The album's <strong>all-black cover</strong> (with only the band's logo in subtle gray) symbolized mourning while the music inside celebrated life. It was perfect.</p>
+                
+                <h3>Continued Success Through the Decades</h3>
+                <p>From <em>For Those About to Rock (We Salute You)</em> (1981) with its cannon-fire title track, through <em>The Razors Edge</em> (1990) featuring "Thunderstruck," to <em>Power Up</em> (2020) – a tribute to Malcolm Young – Brian Johnson has led AC/DC for over <strong>40 years</strong>, proving the band's enduring power.</p>
+            </div>
+            
+            <div class="content-image">
+                <img src="https://images.openai.com/static-rsc-4/Sn-3ERpq8nqzVZRoJmPRv779uqepsE35B4HFdZnfyka8dVl9EzPcz86Gu31WIFD4bClMiOn-bD6damXqvqSRq-q38nGSPw2kM8-PVK1jwRBhNJHmbO5jISK4791nyRwKQeqUHObe30XwnKNZL77N5xcDGR8flZyEO2cMEjHLPo34kKd6GPGENm4iPeM32VcA?purpose=fullsize" alt="Brian Johnson Performing">
+            </div>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section class="section" id="members">
+        <div class="section-header">
+            <h2 class="section-title">Band Members: Complete Profiles</h2>
+        </div>
+        
+        <div class="members-grid fade-in">
+            <div class="member-card">
+                <div class="member-header">
+                    <h3 class="member-name">Angus Young</h3>
+                    <p class="member-role">Lead Guitar • Founding Member</p>
+                </div>
+                <div class="member-body">
+                    <div class="member-detail">
+                        <span class="detail-label">Born:</span>
+                        <span class="detail-value">March 31, 1955, Glasgow, Scotland</span>
+                    </div>
+                    <div class="member-detail">
+                        <span class="detail-label">Years Active:</span>
+                        <span class="detail-value">1973-Present (only continuous member)</span>
+                    </div>
+                    <div class="member-detail">
+                        <span class="detail-label">Status:</span>
+                        <span class="detail-value">Active</span>
+                    </div>
+                    <div class="member-detail">
+                        <span class="detail-label">Personal:</span>
+                        <span class="detail-value">Married to Ellen Young</span>
+                    </div>
+                    <div class="member-bio">
+                        Angus is the face of AC/DC – instantly recognizable in his <strong>schoolboy uniform</strong>. Known for virtuoso guitar playing, the legendary <strong>"duck walk"</strong>, wild live performances, and being widely regarded as one of rock's greatest guitarists. Has remained AC/DC's driving force for over <strong>50 years</strong>.
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-card">
+                <div class="member-header">
+                    <h3 class="member-name">Malcolm Young</h3>
+                    <p class="member-role">Rhythm Guitar • Chief Songwriter</p>
+                </div>
+                <div class="member-body">
+                    <div class="member-detail">
+                        <span class="detail-label">Born:</span>
+                        <span class="detail-value">January 6, 1953, Glasgow, Scotland</span>
+                    </div>
+                    <div class="member-detail">
+                        <span class="detail-label">Years Active:</span>
+                        <span class="detail-value">1973-2014</span>
+                    </div>
+                    <div class="member-detail">
+                        <span class="detail-label">Died:</span>
+                        <span class="detail-value">November 18, 2017 (age 64)</span>
+                    </div>
+                    <div class="member-detail">
+                        <span class="detail-label">Family:</span>
+                        <span class="detail-value">Married to Linda; Two children</span>
+                    </div>
+                    <div class="member-bio">
+                        Malcolm was the <strong>backbone and brains</strong> of AC/DC – primary songwriter, rhythm guitarist, and musical director. He wrote most of the band's legendary riffs and protected their integrity. Diagnosed with dementia in 2014, he retired and passed away in 2017. His legacy lives on in every AC/DC riff.
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-card">
+                <div class="member-header">
+                    <h3 class="member-name">Bon Scott</h3>
+                    <p class="member-role">Lead Vocals (1974-1980)</p>
+                </div>
+                <div class="member-body">
+                    <div class="member-detail">
+                        <span class="detail-label">Born:</span>
+                        <span class="detail-value">July 9, 1946, Forfar, Scotland</span>
+                    </div>
+                    <div class="member-detail">
+                        <span class="detail-label">Years Active:</span>
+                        <span class="detail-value">1974-1980</span>
+                    </div>
+                    <div class="member-detail">
+                        <span class="detail-label">Died:</span>
+                        <span class="detail-value">February 19, 1980 (age 33)</span>
+                    </div>
+                    <div class="member-detail">
+                        <span class="detail-label">Personal:</span>
+                        <span class="detail-value">Married Irene Thornton (divorced)</span>
+                    </div>
+                    <div class="member-bio">
+                        The original wild child frontman. His <strong>raspy voice</strong>, <strong>bad-boy image</strong>, and <strong>witty lyrics</strong> defined AC/DC's early sound. Albums include <em>Highway to Hell</em>, <em>Let There Be Rock</em>, and <em>Dirty Deeds Done Dirt Cheap</em>. His death shocked the world but his legacy is immortal.
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-card">
+                <div class="member-header">
+                    <h3 class="member-name">Brian Johnson</h3>
+                    <p class="member-role">Lead Vocals (1980-Present)</p>
+                </div>
+                <div class="member-body">
+                    <div class="member-detail">
+                        <span class="detail-label">Born:</span>
+                        <span class="detail-value">October 5, 1947, Newcastle, England</span>
+                    </div>
+                    <div class="member-detail">
+                        <span class="detail-label">Years Active:</span>
+                        <span class="detail-value">1980-Present (with brief hiatus)</span>
+                    </div>
+                    <div class="member-detail">
+                        <span class="detail-label">Family:</span>
+                        <span class="detail-value">Married to Brenda; Two daughters</span>
+                    </div>
+                    <div class="member-detail">
+                        <span class="detail-label">Passion:</span>
+                        <span class="detail-value">Classic cars & motorsports</span>
+                    </div>
+                    <div class="member-bio">
+                        Took over after Bon's death and led AC/DC to their greatest commercial success with <em>Back in Black</em>. His <strong>powerful vocals</strong> and <strong>everyman charisma</strong> have kept the band at the top for over <strong>40 years</strong>. A true rock legend.
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-card">
+                <div class="member-header">
+                    <h3 class="member-name">Cliff Williams</h3>
+                    <p class="member-role">Bass Guitar</p>
+                </div>
+                <div class="member-body">
+                    <div class="member-detail">
+                        <span class="detail-label">Born:</span>
+                        <span class="detail-value">December 14, 1949, England</span>
+                    </div>
+                    <div class="member-detail">
+                        <span class="detail-label">Joined:</span>
+                        <span class="detail-value">1977</span>
+                    </div>
+                    <div class="member-detail">
+                        <span class="detail-label">Family:</span>
+                        <span class="detail-value">Married to Georganne; Two children</span>
+                    </div>
+                    <div class="member-bio">
+                        His <strong>steady, solid bass playing</strong> became essential to AC/DC's rhythm section. Reliable, professional, and keeping the low end locked down for over <strong>45 years</strong>. The unsung hero of the band's rhythm section.
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-card">
+                <div class="member-header">
+                    <h3 class="member-name">Phil Rudd</h3>
+                    <p class="member-role">Drums</p>
+                </div>
+                <div class="member-body">
+                    <div class="member-detail">
+                        <span class="detail-label">Born:</span>
+                        <span class="detail-value">May 19, 1954, Melbourne, Australia</span>
+                    </div>
+                    <div class="member-detail">
+                        <span class="detail-label">Joined:</span>
+                        <span class="detail-value">1975 (multiple tenures)</span>
+                    </div>
+                    <div class="member-detail">
+                        <span class="detail-label">Style:</span>
+                        <span class="detail-value">Simple, powerful, no-frills</span>
+                    </div>
+                    <div class="member-bio">
+                        Known for his <strong>minimalist drumming approach</strong> – exactly what AC/DC needs. His steady beat keeps the band's freight train moving. Has left and rejoined multiple times but always welcomed back.
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-card">
+                <div class="member-header">
+                    <h3 class="member-name">Stevie Young</h3>
+                    <p class="member-role">Rhythm Guitar</p>
+                </div>
+                <div class="member-body">
+                    <div class="member-detail">
+                        <span class="detail-label">Relation:</span>
+                        <span class="detail-value">Nephew of Malcolm & Angus</span>
+                    </div>
+                    <div class="member-detail">
+                        <span class="detail-label">Joined Officially:</span>
+                        <span class="detail-value">2014</span>
+                    </div>
+                    <div class="member-detail">
+                        <span class="detail-label">Role:</span>
+                        <span class="detail-value">Took over from Malcolm</span>
+                    </div>
+                    <div class="member-bio">
+                        Stepped in when Malcolm's health declined and has seamlessly continued his uncle's rhythm guitar duties, maintaining the band's authentic sound. Keeping it in the family.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 4rem;" class="fade-in">
+            <div class="content-image" style="max-width: 900px; margin: 0 auto;">
+                <img src="https://images.openai.com/static-rsc-4/M7FlDZhKtUqdsDRLbrKU1RFFF2v9_z6LVNyRzKTkmAIxM3QQwXvFgY7cgwrAnEFM0GjLt64y45FYeQ51OkxJBIrxBfEdfxISz-2NvY18K8pA652KLlA9-Nhu1-jOLjNcGdBRmLfkmjxToAHaMG-bRKwKAZnFEDHkWDxX5caPx_XBeeem7DCpLr_OjfuYOTTr?purpose=fullsize" alt="AC/DC Band Photo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Discography Section -->
+    <section class="section" id="discography">
+        <div class="section-header">
+            <h2 class="section-title">Complete Discography</h2>
+        </div>
+        
+        <div class="bio-content">
+            <div class="bio-section visible">
+                <h2>Bon Scott Era Albums (1974-1980)</h2>
+            </div>
+        </div>
+
+        <div class="albums-grid fade-in">
+            <div class="album-card">
+                <span class="album-year">1975</span>
+                <h3 class="album-title">High Voltage (Aus.)</h3>
+                <p class="album-details">Australian debut featuring "It's a Long Way to the Top"</p>
+            </div>
+
+            <div class="album-card">
+                <span class="album-year">1975</span>
+                <h3 class="album-title">T.N.T.</h3>
+                <p class="album-details">Australia-only release with "T.N.T." and "High Voltage"</p>
+            </div>
+
+            <div class="album-card">
+                <span class="album-year">1976</span>
+                <h3 class="album-title">High Voltage (Intl.)</h3>
+                <p class="album-details">International breakthrough version</p>
+            </div>
+
+            <div class="album-card">
+                <span class="album-year">1976</span>
+                <h3 class="album-title">Dirty Deeds Done Dirt Cheap</h3>
+                <p class="album-details">Title track and "Big Balls"</p>
+            </div>
+
+            <div class="album-card">
+                <span class="album-year">1977</span>
+                <h3 class="album-title">Let There Be Rock</h3>
+                <p class="album-details">Pure rock with "Whole Lotta Rosie"</p>
+            </div>
+
+            <div class="album-card">
+                <span class="album-year">1978</span>
+                <h3 class="album-title">Powerage</h3>
+                <p class="album-details">Harder, rawer sound</p>
+            </div>
+
+            <div class="album-card">
+                <span class="album-year">1979</span>
+                <h3 class="album-title">Highway to Hell ⚡</h3>
+                <p class="album-details">Major commercial breakthrough</p>
+            </div>
+        </div>
+
+        <div class="bio-content" style="margin-top: 4rem;">
+            <div class="bio-section visible">
+                <h2>Brian Johnson Era Albums (1980-Present)</h2>
+            </div>
+        </div>
+
+        <div class="albums-grid fade-in">
+            <div class="album-card">
+                <span class="album-year">1980</span>
+                <h3 class="album-title">Back in Black 🏆</h3>
+                <p class="album-details"><strong>50+ million sold</strong> – One of best-selling albums ever</p>
+            </div>
+
+            <div class="album-card">
+                <span class="album-year">1981</span>
+                <h3 class="album-title">For Those About to Rock</h3>
+                <p class="album-details">Cannon-fired title track</p>
+            </div>
+
+            <div class="album-card">
+                <span class="album-year">1983</span>
+                <h3 class="album-title">Flick of the Switch</h3>
+                <p class="album-details">Raw, self-produced return</p>
+            </div>
+
+            <div class="album-card">
+                <span class="album-year">1988</span>
+                <h3 class="album-title">Blow Up Your Video</h3>
+                <p class="album-details">Comeback with "Heatseeker"</p>
+            </div>
+
+            <div class="album-card">
+                <span class="album-year">1990</span>
+                <h3 class="album-title">The Razors Edge ⚡</h3>
+                <p class="album-details">Features "Thunderstruck"</p>
+            </div>
+
+            <div class="album-card">
+                <span class="album-year">1995</span>
+                <h3 class="album-title">Ballbreaker</h3>
+                <p class="album-details">Phil Rudd returns</p>
+            </div>
+
+            <div class="album-card">
+                <span class="album-year">2000</span>
+                <h3 class="album-title">Stiff Upper Lip</h3>
+                <p class="album-details">Bluesy, back-to-basics</p>
+            </div>
+
+            <div class="album-card">
+                <span class="album-year">2008</span>
+                <h3 class="album-title">Black Ice</h3>
+                <p class="album-details">Massive success after 8-year hiatus</p>
+            </div>
+
+            <div class="album-card">
+                <span class="album-year">2014</span>
+                <h3 class="album-title">Rock or Bust</h3>
+                <p class="album-details">Malcolm's final album</p>
+            </div>
+
+            <div class="album-card">
+                <span class="album-year">2020</span>
+                <h3 class="album-title">Power Up</h3>
+                <p class="album-details">Tribute to Malcolm; critical acclaim</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hit Songs Section -->
+    <section class="section" id="hit-songs">
+        <div class="section-header">
+            <h2 class="section-title">Greatest Hits & Signature Songs</h2>
+        </div>
+        
+        <div class="songs-list">
+            <div class="song-item fade-in">
+                <span class="song-number">01</span>
+                <div>
+                    <h3 class="song-title">Back in Black</h3>
+                    <p class="song-meta"><strong>Album:</strong> Back in Black (1980)<br>
+                    The ultimate comeback anthem. Resilience personified in 4 minutes of pure rock.</p>
+                </div>
+            </div>
+
+            <div class="song-item fade-in">
+                <span class="song-number">02</span>
+                <div>
+                    <h3 class="song-title">Highway to Hell</h3>
+                    <p class="song-meta"><strong>Album:</strong> Highway to Hell (1979)<br>
+                    Bon Scott's swan song – and what a way to go out. Their first major international hit.</p>
+                </div>
+            </div>
+
+            <div class="song-item fade-in">
+                <span class="song-number">03</span>
+                <div>
+                    <h3 class="song-title">Thunderstruck ⚡</h3>
+                    <p class="song-meta"><strong>Album:</strong> The Razors Edge (1990)<br>
+                    That opening guitar riff is one of the most recognizable in rock history. Stadium-filling epic.</p>
+                </div>
+            </div>
+
+            <div class="song-item fade-in">
+                <span class="song-number">04</span>
+                <div>
+                    <h3 class="song-title">You Shook Me All Night Long</h3>
+                    <p class="song-meta"><strong>Album:</strong> Back in Black (1980)<br>
+                    Radio staple for 40+ years. Infectious, fun, undeniably catchy.</p>
+                </div>
+            </div>
+
+            <div class="song-item fade-in">
+                <span class="song-number">05</span>
+                <div>
+                    <h3 class="song-title">Hells Bells 🔔</h3>
+                    <p class="song-meta"><strong>Album:</strong> Back in Black (1980)<br>
+                    Ominous, powerful, a memorial to Bon Scott. Those tolling bells are unforgettable.</p>
+                </div>
+            </div>
+
+            <div class="song-item fade-in">
+                <span class="song-number">06</span>
+                <div>
+                    <h3 class="song-title">T.N.T.</h3>
+                    <p class="song-meta"><strong>Album:</strong> T.N.T. / High Voltage (Int'l) (1975-76)<br>
+                    Explosive energy. "(Oi) T.N.T. I'm dynamite!"</p>
+                </div>
+            </div>
+
+            <div class="song-item fade-in">
+                <span class="song-number">07</span>
+                <div>
+                    <h3 class="song-title">Shoot to Thrill</h3>
+                    <p class="song-meta"><strong>Album:</strong> Back in Black (1980)<br>
+                    Pure adrenaline. Featured prominently in Iron Man movies.</p>
+                </div>
+            </div>
+
+            <div class="song-item fade-in">
+                <span class="song-number">08</span>
+                <div>
+                    <h3 class="song-title">Dirty Deeds Done Dirt Cheap</h3>
+                    <p class="song-meta"><strong>Album:</strong> Dirty Deeds Done Dirt Cheap (1976)<br>
+                    Darkly humorous lyrics meet killer riffs. A fan favorite.</p>
+                </div>
+            </div>
+
+            <div class="song-item fade-in">
+                <span class="song-number">09</span>
+                <div>
+                    <h3 class="song-title">Whole Lotta Rosie</h3>
+                    <p class="song-meta"><strong>Album:</strong> Let There Be Rock (1977)<br>
+                    Based on a real woman Bon met in Tasmania. Raw, raunchy, incredible.</p>
+                </div>
+            </div>
+
+            <div class="song-item fade-in">
+                <span class="song-number">10</span>
+                <div>
+                    <h3 class="song-title">It's a Long Way to the Top</h3>
+                    <p class="song-meta"><strong>Album:</strong> High Voltage (Aus.) (1975)<br>
+                    Bagpipe solo included. An ode to the struggles of rock stardom.</p>
+                </div>
+            </div>
+
+            <div class="song-item fade-in">
+                <span class="song-number">11</span>
+                <div>
+                    <h3 class="song-title">For Those About to Rock (We Salute You)</h3>
+                    <p class="song-meta"><strong>Album:</strong> For Those About to Rock (1981)<br>
+                    Cannon fire included. The ultimate concert closer. 💥</p>
+                </div>
+            </div>
+
+            <div class="song-item fade-in">
+                <span class="song-number">12</span>
+                <div>
+                    <h3 class="song-title">Rock and Roll Ain't Noise Pollution</h3>
+                    <p class="song-meta"><strong>Album:</strong> Back in Black (1980)<br>
+                    Defense of rock music against critics. Bluesy, powerful.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section class="section" id="awards">
+        <div class="section-header">
+            <h2 class="section-title">Awards, Achievements & Legacy</h2>
+        </div>
+        
+        <div class="awards-grid fade-in">
+            <div class="award-card">
+                <div class="award-icon">🏆</div>
+                <h3 class="award-title">Rock and Roll Hall of Fame</h3>
+                <p class="award-description">Inducted in <strong>2003</strong> – Recognition as one of the most influential acts in rock history.</p>
+            </div>
+
+            <div class="award-card">
+                <div class="award-icon">🎸</div>
+                <h3 class="award-title">Grammy Awards</h3>
+                <p class="award-description">Multiple nominations throughout career. Won <strong>Best Rock Performance (2020)</strong> for "Power Up".</p>
+            </div>
+
+            <div class="award-card">
+                <div class="award-icon">🇦🇺</div>
+                <h3 class="award-title">ARIA Hall of Fame</h3>
+                <p class="award-description">Inducted into the Australian Recording Industry Association Hall of Fame in <strong>1988</strong>.</p>
+            </div>
+
+            <div class="award-card">
+                <div class="award-icon">⭐</div>
+                <h3 class="award-title">Hollywood Walk of Fame</h3>
+                <p class="award-description">Received a star on Hollywood's Walk of Fame, cementing their status as entertainment legends.</p>
+            </div>
+
+            <div class="award-card">
+                <div class="award-icon">💿</div>
+                <h3 class="award-title">200+ Million Records Sold</h3>
+                <p class="award-description">One of the <strong>best-selling music artists in history</strong>. Consistent global success across five decades.</p>
+            </div>
+
+            <div class="award-card">
+                <div class="award-icon">💰</div>
+                <h3 class="award-title">Back in Black: 50+ Million</h3>
+                <p class="award-description"><strong>Second best-selling album globally</strong> (behind Thriller). Achieved with zero initial music videos!</p>
+            </div>
+
+            <div class="award-card">
+                <div class="award-icon">🎬</div>
+                <h3 class="award-title">Massive Cultural Impact</h3>
+                <p class="award-description">Iron Man soundtrack, countless films, sports anthems, commercials. New generations discover them constantly.</p>
+            </div>
+
+            <div class="award-card">
+                <div class="award-icon">🌍</div>
+                <h3 class="award-title">Global Influence</h3>
+                <p class="award-description">Influenced virtually every hard rock/metal band since: Metallica, Guns N' Roses, Foo Fighters, and countless others.</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 4rem; padding: 3rem; background: linear-gradient(135deg, rgba(227, 28, 37, 0.15), rgba(255, 235, 59, 0.1)); border: 2px solid var(--border-color);">
+            <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: var(--primary-red); margin-bottom: 1.5rem; text-align: center; letter-spacing: 2px;">The AC/DC Legacy ⚡</h3>
+            <ul style="list-style: none; max-width: 800px; margin: 0 auto; font-size: 1.05rem;">
+                <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--border-color); color: var(--text-secondary);">✅ Authenticity over pretension</li>
+                <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--border-color); color: var(--text-secondary);">✅ Power over polish</li>
+                <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--border-color); color: var(--text-secondary);">✅ Consistency over trends</li>
+                <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--border-color); color: var(--text-secondary);">✅ Resilience through tragedy</li>
+                <li style="padding: 0.8rem 0; color: var(--text-secondary);">✅ The eternal spirit of rock 'n' roll</li>
+            </ul>
+            <p style="text-align: center; margin-top: 2rem; color: var(--text-primary); font-size: 1.2rem; font-weight: 600;">
+                From Bon Scott to Brian Johnson, from Malcolm's riffs to Angus's solos,<br>
+                AC/DC has remained true to their vision for <strong style="color: var(--primary-red);">over 50 years</strong>.<br>
+                In an industry of fads and fleeting fame, they are <strong style="color: var(--lightning-yellow);">IMMORTAL</strong>. ⚡
+            </p>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="section" id="timeline">
+        <div class="section-header">
+            <h2 class="section-title">Complete Career Timeline</h2>
+        </div>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">1953</div>
+                    <div class="timeline-text"><strong>Malcolm Young born</strong> in Glasgow, Scotland</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">1955</div>
+                    <div class="timeline-text"><strong>Angus Young born</strong> in Glasgow, Scotland</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">1963</div>
+                    <div class="timeline-text">Young family <strong>emigrates to Sydney, Australia</strong></div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">NOV 1973 ⚡</div>
+                    <div class="timeline-text"><strong>AC/DC FORMED</strong> by Malcolm and Angus Young in Sydney</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">1974</div>
+                    <div class="timeline-text"><strong>Bon Scott joins</strong> as lead vocalist – classic lineup begins</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">1975</div>
+                    <div class="timeline-text">Debut albums <em>High Voltage</em> (Aus.) and <em>T.N.T.</em> released</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">1976</div>
+                    <div class="timeline-text">International breakthrough; <em>Dirty Deeds Done Dirt Cheap</em></div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">1977</div>
+                    <div class="timeline-text"><em>Let There Be Rock</em>; <strong>Cliff Williams joins</strong> on bass</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">1979</div>
+                    <div class="timeline-text"><em>HIGHWAY TO HELL</em> ⚡ – Major commercial breakthrough</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">FEB 19, 1980 💀</div>
+                    <div class="timeline-text"><strong>BON SCOTT DIES</strong> at age 33 in London</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">APR 1980</div>
+                    <div class="timeline-text"><strong>Brian Johnson joins</strong> as new vocalist</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">JUL 1980 🏆</div>
+                    <div class="timeline-text"><em>BACK IN BLACK</em> released – becomes one of best-selling albums ever (50M+)</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">1981</div>
+                    <div class="timeline-text"><em>For Those About to Rock</em> – cannons and glory</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">1990</div>
+                    <div class="timeline-text"><em>THE RAZORS EDGE</em> – features "Thunderstruck"; massive tour</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">2003</div>
+                    <div class="timeline-text"><strong>Inducted into Rock and Roll Hall of Fame</strong> 🏆</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">2008</div>
+                    <div class="timeline-text"><em>BLACK ICE</em> – Huge comeback; #1 in 29 countries</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">2014</div>
+                    <div class="timeline-text"><em>Rock or Bust</em>; <strong>Malcolm Young retires</strong>; Stevie takes over</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">NOV 18, 2017 💔</div>
+                    <div class="timeline-text"><strong>MALCOLM YOUNG DIES</strong> at age 64</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">2020 ⚡</div>
+                    <div class="timeline-text"><em>POWER UP</em> released – Tribute to Malcolm; critical acclaim</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">PRESENT</div>
+                    <div class="timeline-text">Band continues touring and performing – <strong>OVER 50 YEARS OF ROCK 'N' ROLL</strong>! 🤘</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 4rem;" class="fade-in">
+            <div class="content-image" style="max-width: 900px; margin: 0 auto;">
+                <img src="https://images.openai.com/static-rsc-4/xQnkZ2EE0DT5w5JRjfnt7R1nYkz8L1xKK-eT4qwI19XVpYJ6x2Ak1PNdKHYZ9bJB1rFBXiv6dj3XPLfk8DCUZC_aNRL6al6EXBR63qzNAJ1Hv-VDzf1Lk6tU_pe9LCvRYZI1SddyHIltN0JGFsBeO7MBTzrofcXS78HbBqaF-pmuck9DvML8yg9X-VHg_LS7?purpose=fullsize" alt="Modern AC/DC">
+            </div>
+        </div>
+    </section>
+
+    <!-- Interesting Facts Section -->
+    <section class="section" id="interesting-facts">
+        <div class="section-header">
+            <h2 class="section-title">Interesting Facts & Stories</h2>
+        </div>
+        
+        <div class="facts-container">
+            <div class="fact-block fade-in">
+                <h3>The Schoolboy Uniform Origin 👔</h3>
+                <div class="fact-subsection">
+                    <p>Angus's iconic schoolboy uniform wasn't a marketing gimmick – it started as a joke! His sister Margaret suggested it because Angus was often so focused on playing guitar that he'd forget to change out of his casual clothes. The uniform (blazer, shorts, tie, cap) became his trademark and one of the most recognizable looks in rock.</p>
+                </div>
+            </div>
+
+            <div class="fact-block fade-in">
+                <h3>Back in Black's Global Dominance 💿</h3>
+                <div class="fact-subsection">
+                    <p><em>Back in Black</em> is the <strong>second-best-selling album in history</strong> (behind Michael Jackson's <em>Thriller</em>) with <strong>50+ million copies sold</strong>. Remarkably, it achieved this with <strong>zero music videos</strong> released initially – purely through word-of-mouth, radio play, and relentless touring.</p>
+                </div>
+            </div>
+
+            <div class="fact-block fade-in">
+                <h3>The Name Meaning ⚡</h3>
+                <div class="fact-subsection">
+                    <p>"AC/DC" is a term for bisexual in some slang contexts – completely unintentional! The Young brothers simply liked the electrical reference. The band has embraced the ambiguity over the years.</p>
+                </div>
+            </div>
+
+            <div class="fact-block fade-in">
+                <h3>Lineup Stability 🔄</h3>
+                <div class="fact-subsection">
+                    <p>Despite being active for <strong>50+ years</strong>, AC/DC has had only <strong>three vocalists</strong> (Dave Evans, Bon Scott, Brian Johnson). Compare that to other long-running bands! This stability (especially Brian's 40+ year tenure) is remarkable.</p>
+                </div>
+            </div>
+
+            <div class="fact-block fade-in">
+                <h3>Malcolm's Songwriting Role 🎸</h3>
+                <div class="fact-subsection">
+                    <p>While Angus gets the spotlight, <strong>Malcolm wrote most of AC/DC's riffs</strong>. He was the primary songwriter and musical director, ensuring the band stayed true to their sound. Angus once said, "Malcolm is the band. I'm just the guitarist."</p>
+                </div>
+            </div>
+
+            <div class="fact-block fade-in">
+                <h3>Phil Rudd's Minimalist Approach 🥁</h3>
+                <div class="fact-subsection">
+                    <p>Phil Rudd's drumming is famously <strong>simple but powerful</strong>. He doesn't do fills or show off – he locks in with the bass and drives the groove. This discipline is why AC/DC sounds so tight.</p>
+                </div>
+            </div>
+
+            <div class="fact-block fade-in">
+                <h3>No Stylistic Shifts 🎯</h3>
+                <div class="fact-subsection">
+                    <p>Unlike most bands, AC/DC has <strong>never changed their fundamental sound</strong>. No synth-pop phase, no acoustic albums, no experiments. They found their formula in 1975 and perfected it. This consistency is part of their legend.</p>
+                </div>
+            </div>
+
+            <div class="fact-block fade-in">
+                <h3>Movie Soundtrack Dominance 🎬</h3>
+                <div class="fact-subsection">
+                    <p>AC/DC songs appear in countless films, but their biggest modern moment was providing <strong>multiple tracks for the Iron Man movies</strong> (Marvel), introducing them to a new generation.</p>
+                </div>
+            </div>
+
+            <div class="fact-block fade-in">
+                <h3>Grammy Win After 40 Years 🏆</h3>
+                <div class="fact-subsection">
+                    <p>Despite decades of eligibility, AC/DC won their <strong>first Grammy Award in 2020</strong> for <em>Power Up</em> in the Best Rock Performance category – proving they can still compete with modern artists.</p>
+                </div>
+            </div>
+
+            <div class="fact-block fade-in">
+                <h3>Angus Still Performs the Duck Walk 🦆</h3>
+                <div class="fact-subsection">
+                    <p>At <strong>68+ years old</strong>, Angus still performs his signature <strong>"duck walk"</strong> across stages worldwide during marathon concerts. His energy remains legendary and unmatched.</p>
+                </div>
+            </div>
+
+            <div class="fact-block fade-in">
+                <h3>Scottish-Australian Identity 🏴󠁧󠁢󠁳󠁣󠁴󠁿🇦🇺</h3>
+                <div class="fact-subsection">
+                    <p>AC/DC embodies a unique cultural blend: <strong>Scottish working-class roots</strong> + <strong>Australian rebellious attitude</strong> + <strong>American rock ambition</strong> = <strong>global rock dominance</strong>.</p>
+                </div>
+            </div>
+
+            <div class="fact-block fade-in">
+                <h3>Australian vs International Albums 🗺️</h3>
+                <div class="fact-subsection">
+                    <p>AC/DC's early Australian releases (<em>High Voltage</em>, <em>T.N.T.</em>) have <strong>different tracklists</strong> than the international versions released later. Hardcore fans seek out both versions!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logo">AC/DC</div>
+        <p class="footer-text">
+            One of the most influential and commercially successful rock bands in history. From their formation in Sydney in 1973 to their current status as living legends, AC/DC has delivered high voltage rock 'n' roll for over 50 years. With 200+ million records sold, timeless anthems, and an unwavering commitment to authentic hard rock, they remain the gold standard for rock music worldwide.
+        </p>
+        <div class="footer-links">
+            <a href="#hero">Home</a>
+            <a href="#origins">Origins</a>
+            <a href="#bon-scott">Bon Scott Era</a>
+            <a href="#brian-johnson">Brian Johnson Era</a>
+            <a href="#members">Members</a>
+            <a href="#discography">Discography</a>
+            <a href="#hit-songs">Hit Songs</a>
+            <a href="#awards">Awards</a>
+            <a href="#timeline">Timeline</a>
+            <a href="#interesting-facts">Interesting Facts</a>
+        </div>
+        <p class="copyright">
+            © 2024 Ultimate Band Profile | High Voltage Rock 'n' Roll Forever ⚡<br>
+            This is an educational fan site dedicated to celebrating AC/DC's legendary legacy<br>
+            All trademarks and copyrights belong to their respective owners
+        </p>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.fade-in, .bio-section, .timeline-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
